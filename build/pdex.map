@@ -1,0 +1,377 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-strlen.o)
+                              build/src/main.o (strlen)
+
+Discarded input sections
+
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .group         0x0000000000000000        0xc build/src/main.o
+ .text          0x0000000000000000        0x0 build/src/main.o
+ .data          0x0000000000000000        0x0 build/src/main.o
+ .bss           0x0000000000000000        0x0 build/src/main.o
+ .text.ProcessInput
+                0x0000000000000000       0x20 build/src/main.o
+ .data.dx       0x0000000000000000        0x4 build/src/main.o
+ .data.dy       0x0000000000000000        0x4 build/src/main.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .group         0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .text          0x0000000000000000        0x0 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .data          0x0000000000000000        0x0 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .bss           0x0000000000000000        0x0 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .text._malloc_r
+                0x0000000000000000        0xc build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .text._realloc_r
+                0x0000000000000000       0x10 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .text._free_r  0x0000000000000000       0x14 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000      0xaa8 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x22 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0xef build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x6a build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000      0x1df build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x18 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x35 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x34 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x16 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x58 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x1f build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x43 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x20 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000      0x18e build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000      0x339 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x16 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x29 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x28 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x16 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x35 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000       0x22 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000000000      0x1e1 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .data          0x0000000000000000        0x0 /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-strlen.o)
+ .bss           0x0000000000000000        0x0 /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-strlen.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD build/src/main.o
+LOAD build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+START GROUP
+LOAD /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a
+LOAD /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a
+LOAD /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a
+END GROUP
+START GROUP
+LOAD /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a
+LOAD /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc.a
+LOAD /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
+END GROUP
+
+.text           0x0000000000000000      0x315
+ *(.text)
+ .text          0x0000000000000000       0xdc /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-strlen.o)
+                0x0000000000000000                strlen
+ *(.text.*)
+ *fill*         0x00000000000000dc        0x4 
+ .text.eventHandler
+                0x00000000000000e0       0x58 build/src/main.o
+                0x00000000000000e0                eventHandler
+ *fill*         0x0000000000000138        0x8 
+ .text.getFrame
+                0x0000000000000140       0x50 build/src/main.o
+                0x0000000000000140                getFrame
+ .text.drawMaze
+                0x0000000000000190       0x64 build/src/main.o
+                0x0000000000000190                drawMaze
+ *fill*         0x00000000000001f4        0xc 
+ .text.update   0x0000000000000200       0x64 build/src/main.o
+ *fill*         0x0000000000000264        0xc 
+ .text.eventHandlerShim
+                0x0000000000000270       0x1c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+                0x0000000000000270                eventHandlerShim
+ *(.init)
+ *(.fini)
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+ *(.rodata*)
+ .rodata.eventHandler.str1.4
+                0x000000000000028c       0x2c build/src/main.o
+ .rodata.drawMaze.str1.4
+                0x00000000000002b8       0x33 build/src/main.o
+ *fill*         0x00000000000002eb        0x1 
+ .rodata.str1.4
+                0x00000000000002ec       0x29 build/src/main.o
+ *(.eh_frame*)
+
+.glue_7         0x0000000000000318        0x0
+ .glue_7        0x0000000000000318        0x0 linker stubs
+
+.glue_7t        0x0000000000000318        0x0
+ .glue_7t       0x0000000000000318        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000000318        0x0
+ .vfp11_veneer  0x0000000000000318        0x0 linker stubs
+
+.v4_bx          0x0000000000000318        0x0
+ .v4_bx         0x0000000000000318        0x0 linker stubs
+
+.iplt           0x0000000000000318        0x0
+ .iplt          0x0000000000000318        0x0 build/src/main.o
+
+.rel.dyn        0x0000000000000318        0x0
+ .rel.iplt      0x0000000000000318        0x0 build/src/main.o
+
+.data           0x0000000000000318        0xc
+                0x0000000000000318                __etext = .
+                0x0000000000000318                __data_start__ = .
+ *(vtable)
+ *(.data*)
+ .data.fontpath
+                0x0000000000000318        0x4 build/src/main.o
+                0x0000000000000318                fontpath
+ .data.x        0x000000000000031c        0x4 build/src/main.o
+                0x000000000000031c                x
+ .data.y        0x0000000000000320        0x4 build/src/main.o
+                0x0000000000000320                y
+                0x0000000000000324                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+                0x0000000000000324                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = .)
+                0x0000000000000324                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x0000000000000324                . = ALIGN (0x4)
+                0x0000000000000324                __data_end__ = .
+
+.igot.plt       0x0000000000000324        0x0
+ .igot.plt      0x0000000000000324        0x0 build/src/main.o
+
+.bss            0x0000000000000324       0x84
+                0x0000000000000324                . = ALIGN (0x4)
+                0x0000000000000324                __bss_start__ = .
+ *(.bss*)
+ .bss.GAMEDATA  0x0000000000000324       0x18 build/src/main.o
+                0x0000000000000324                GAMEDATA
+ .bss.buttonState
+                0x000000000000033c       0x64 build/src/main.o
+                0x000000000000033c                buttonState
+ .bss.font      0x00000000000003a0        0x4 build/src/main.o
+                0x00000000000003a0                font
+ .bss.pdrealloc
+                0x00000000000003a4        0x4 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ *(COMMON)
+ *(COM)
+                0x00000000000003a8                . = ALIGN (0x4)
+                0x00000000000003a8                __bss_end__ = .
+
+/DISCARD/
+ *(.ARM.exidx)
+OUTPUT(build/pdex.elf elf32-littlearm)
+
+.debug_info     0x0000000000000000     0xce84
+ .debug_info    0x0000000000000000     0x6895 build/src/main.o
+ .debug_info    0x0000000000006895     0x65ef build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+
+.debug_abbrev   0x0000000000000000      0x794
+ .debug_abbrev  0x0000000000000000      0x452 build/src/main.o
+ .debug_abbrev  0x0000000000000452      0x342 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+
+.debug_loc      0x0000000000000000      0x505
+ .debug_loc     0x0000000000000000      0x2e9 build/src/main.o
+ .debug_loc     0x00000000000002e9      0x21c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+
+.debug_aranges  0x0000000000000000       0x78
+ .debug_aranges
+                0x0000000000000000       0x40 build/src/main.o
+ .debug_aranges
+                0x0000000000000040       0x38 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+
+.debug_ranges   0x0000000000000000       0x80
+ .debug_ranges  0x0000000000000000       0x58 build/src/main.o
+ .debug_ranges  0x0000000000000058       0x28 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+
+.debug_macro    0x0000000000000000     0x25b7
+ .debug_macro   0x0000000000000000      0x2a1 build/src/main.o
+ .debug_macro   0x00000000000002a1      0xaa8 build/src/main.o
+ .debug_macro   0x0000000000000d49       0x22 build/src/main.o
+ .debug_macro   0x0000000000000d6b       0x58 build/src/main.o
+ .debug_macro   0x0000000000000dc3       0x18 build/src/main.o
+ .debug_macro   0x0000000000000ddb       0x94 build/src/main.o
+ .debug_macro   0x0000000000000e6f       0x35 build/src/main.o
+ .debug_macro   0x0000000000000ea4       0x34 build/src/main.o
+ .debug_macro   0x0000000000000ed8       0x16 build/src/main.o
+ .debug_macro   0x0000000000000eee       0x57 build/src/main.o
+ .debug_macro   0x0000000000000f45       0x97 build/src/main.o
+ .debug_macro   0x0000000000000fdc      0x339 build/src/main.o
+ .debug_macro   0x0000000000001315       0xfd build/src/main.o
+ .debug_macro   0x0000000000001412       0x10 build/src/main.o
+ .debug_macro   0x0000000000001422       0x58 build/src/main.o
+ .debug_macro   0x000000000000147a       0x1f build/src/main.o
+ .debug_macro   0x0000000000001499       0x43 build/src/main.o
+ .debug_macro   0x00000000000014dc       0x20 build/src/main.o
+ .debug_macro   0x00000000000014fc      0x18e build/src/main.o
+ .debug_macro   0x000000000000168a       0x10 build/src/main.o
+ .debug_macro   0x000000000000169a       0x6a build/src/main.o
+ .debug_macro   0x0000000000001704       0x1c build/src/main.o
+ .debug_macro   0x0000000000001720       0x52 build/src/main.o
+ .debug_macro   0x0000000000001772       0x40 build/src/main.o
+ .debug_macro   0x00000000000017b2       0x10 build/src/main.o
+ .debug_macro   0x00000000000017c2       0x40 build/src/main.o
+ .debug_macro   0x0000000000001802       0xd7 build/src/main.o
+ .debug_macro   0x00000000000018d9       0x1c build/src/main.o
+ .debug_macro   0x00000000000018f5       0x3d build/src/main.o
+ .debug_macro   0x0000000000001932       0x16 build/src/main.o
+ .debug_macro   0x0000000000001948      0x16f build/src/main.o
+ .debug_macro   0x0000000000001ab7       0x16 build/src/main.o
+ .debug_macro   0x0000000000001acd       0x35 build/src/main.o
+ .debug_macro   0x0000000000001b02       0x16 build/src/main.o
+ .debug_macro   0x0000000000001b18       0x29 build/src/main.o
+ .debug_macro   0x0000000000001b41       0xef build/src/main.o
+ .debug_macro   0x0000000000001c30      0x1df build/src/main.o
+ .debug_macro   0x0000000000001e0f       0x28 build/src/main.o
+ .debug_macro   0x0000000000001e37       0x4c build/src/main.o
+ .debug_macro   0x0000000000001e83       0x16 build/src/main.o
+ .debug_macro   0x0000000000001e99       0x22 build/src/main.o
+ .debug_macro   0x0000000000001ebb      0x1e1 build/src/main.o
+ .debug_macro   0x000000000000209c      0x1cf build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x000000000000226b       0x8e build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x00000000000022f9       0x51 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x000000000000234a       0x5e build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x00000000000023a8      0x10e build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x00000000000024b6       0x8d build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x0000000000002543       0x58 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_macro   0x000000000000259b       0x1c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+
+.debug_line     0x0000000000000000      0xb0b
+ .debug_line    0x0000000000000000      0x66f build/src/main.o
+ .debug_line    0x000000000000066f      0x49c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+
+.debug_str      0x0000000000000000     0xb0aa
+ .debug_str     0x0000000000000000     0xafea build/src/main.o
+                                       0xb4ad (size before relaxing)
+ .debug_str     0x000000000000afea       0xc0 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+                                       0xa261 (size before relaxing)
+
+.comment        0x0000000000000000       0x79
+ .comment       0x0000000000000000       0x79 build/src/main.o
+                                         0x7a (size before relaxing)
+ .comment       0x0000000000000079       0x7a build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+
+.ARM.attributes
+                0x0000000000000000       0x32
+ .ARM.attributes
+                0x0000000000000000       0x34 build/src/main.o
+ .ARM.attributes
+                0x0000000000000034       0x34 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .ARM.attributes
+                0x0000000000000068       0x1c /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-strlen.o)
+
+.debug_frame    0x0000000000000000      0x12c
+ .debug_frame   0x0000000000000000       0xd0 build/src/main.o
+ .debug_frame   0x00000000000000d0       0x5c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+
+Cross Reference Table
+
+Symbol                                            File
+GAMEDATA                                          build/src/main.o
+ProcessInput                                      build/src/main.o
+_free_r                                           build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+_malloc_r                                         build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+_realloc_r                                        build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+buttonState                                       build/src/main.o
+drawMaze                                          build/src/main.o
+dx                                                build/src/main.o
+dy                                                build/src/main.o
+eventHandler                                      build/src/main.o
+                                                  build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+eventHandlerShim                                  build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+font                                              build/src/main.o
+fontpath                                          build/src/main.o
+getFrame                                          build/src/main.o
+strlen                                            /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-strlen.o)
+                                                  build/src/main.o
+x                                                 build/src/main.o
+y                                                 build/src/main.o
