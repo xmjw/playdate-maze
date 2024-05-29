@@ -1,5 +1,5 @@
-name=Hello World C
-author=Dave Hayden
-description=A small demo of the C API
+name=Henry's Maze
+author=Michael
+description=Demo Maze App
 bundleID=com.panic.hellocapi
 imagePath=

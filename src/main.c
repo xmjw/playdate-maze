@@ -9,7 +9,8 @@ void ProcessInput(PlaydateAPI* pd);
 void drawMaze(PlaydateAPI* pd);
 LCDBitmap* getFrame(PlaydateAPI *pd, int x, int y);
 void init(PlaydateAPI *pd);
-void build_maze();
+int build_maze(PlaydateAPI *pd);
+void drawPlayer(PlaydateAPI* pd);
 
 const int MAZE_X = 12;
 const int MAZE_Y = 7;
@@ -22,8 +23,12 @@ struct {
   int SCREEN_HEIGHT;
   float frame;
   LCDBitmapTable* bitmapTable;
+	LCDBitmapTable* playerTable;
   const char* err;
-	int maze[MAZE_LINEAR];
+	int maze[84];
+	int player_x;
+	int player_y;	
+	double playerFrame;
 } GAMEDATA;
 
 
@@ -62,13 +67,26 @@ void init(PlaydateAPI *pd)
 
 	if (GAMEDATA.bitmapTable == NULL)
 	{
-    pd->system->error( "Could not load bitmap table: %s", GAMEDATA.err );
+    pd->system->error( "Could not load wall bitmap table: %s", GAMEDATA.err );
 	}
-	else pd->system->logToConsole( "Got bitmap, ready to roll.");
+	else pd->system->logToConsole( "Got wall bitmap, ready to roll.");
 
-	build_maze();
+  const char* player_table = "player"; // "robot-table-8-8.png";
+  GAMEDATA.playerTable = pd->graphics->loadBitmapTable( player_table, &GAMEDATA.err );
 
-	srand(time(NULL));
+	if (GAMEDATA.playerTable == NULL)
+	{
+    pd->system->error( "Could not load player bitmap table: %s", GAMEDATA.err );
+	}
+	else pd->system->logToConsole( "Got player bitmap, ready to roll.");
+
+
+	GAMEDATA.player_x = 0;
+	GAMEDATA.player_y = 0;
+
+	build_maze(pd);
+
+	// srand(time(NULL));
 }
 
 static int update(void* userdata)
@@ -77,6 +95,7 @@ static int update(void* userdata)
 	pd->graphics->clear(kColorWhite);
   ProcessInput(pd);
   drawMaze(pd);
+	drawPlayer(pd);
 
 	return 1;
 }
@@ -88,12 +107,27 @@ void ProcessInput(PlaydateAPI* pd)
   PDButtons released;
   pd->system->getButtonState( &current, &pushed, &released );
 
-  // if ( pushed & kButtonLeft  ) { GAMEDATA.frame--;   }
-  // else if ( pushed & kButtonUp    ) { GAMEDATA.frame++;     }
-  // else if ( pushed & kButtonDown  ) { GAMEDATA.frame--;   }
-  // else if ( pushed & kButtonRight ) { GAMEDATA.frame++;  }
+  if ( pushed & kButtonLeft  ) { GAMEDATA.player_x--; }
+  else if ( pushed & kButtonUp    ) { GAMEDATA.player_y--; }
+  else if ( pushed & kButtonDown  ) { GAMEDATA.player_y++; }
+  else if ( pushed & kButtonRight ) { GAMEDATA.player_x++; }
+  else if ( pushed & kButtonA ) { build_maze(pd); }
+
+	if (GAMEDATA.player_x <= 0) GAMEDATA.player_x = 0;
+	if (GAMEDATA.player_x >= MAZE_X-1) GAMEDATA.player_x = MAZE_X-1;
+	if (GAMEDATA.player_y <= 0) GAMEDATA.player_y = 0;
+	if (GAMEDATA.player_y >= MAZE_Y-1) GAMEDATA.player_y = MAZE_Y-1;
 }
 
+void drawPlayer(PlaydateAPI* pd)
+{
+  GAMEDATA.playerFrame += 0.2;
+
+	if (GAMEDATA.playerFrame > 4) GAMEDATA.playerFrame = 0;
+
+	LCDBitmap *p = pd->graphics->getTableBitmap( GAMEDATA.playerTable, (int) GAMEDATA.playerFrame);
+  pd->graphics->drawScaledBitmap( p, X_OFFSET+(GAMEDATA.player_x*32), Y_OFFSET+(GAMEDATA.player_y*32), 4, 4 );
+}
 void drawMaze(PlaydateAPI* pd)
 {
 	//Loop over the grid like it's 1992...
@@ -110,19 +144,20 @@ void drawMaze(PlaydateAPI* pd)
        pd->graphics->drawScaledBitmap( getFrame(pd, x, y), X_OFFSET+(x*32), Y_OFFSET+(y*32), 4, 4 );
 		}
 	}
-}
 
+	//need to draw a player...
+}
 
 LCDBitmap* getFrame(PlaydateAPI *pd, int x, int y)
 {
   return pd->graphics->getTableBitmap( GAMEDATA.bitmapTable, GAMEDATA.maze[x*y]);
 }
 
-
-void build_maze()
+int build_maze(PlaydateAPI *pd)
 {
 	for(int i=0;i<MAZE_LINEAR;i++)
 	{	
 	  GAMEDATA.maze[i] = rand() % 14;
 	}
+	return 0;
 }
