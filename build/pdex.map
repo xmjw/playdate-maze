@@ -61,8 +61,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/src/main.o
  .data          0x0000000000000000        0x0 build/src/main.o
  .bss           0x0000000000000000        0x0 build/src/main.o
- .text.getFrame
-                0x0000000000000000       0x1c build/src/main.o
  .text.build_maze
                 0x0000000000000000       0x38 build/src/main.o
  .rodata.MAZE_LINEAR
@@ -170,7 +168,7 @@ LOAD /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-no
 LOAD /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
 END GROUP
 
-.text           0x0000000000000000      0x921
+.text           0x0000000000000000      0x981
  *(.text)
  .text          0x0000000000000000      0x378 /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
                 0x0000000000000000                __aeabi_drsub
@@ -222,17 +220,21 @@ END GROUP
                 0x00000000000006c0       0x78 build/src/main.o
                 0x00000000000006c0                drawPlayer
  *fill*         0x0000000000000738        0x8 
+ .text.getFrame
+                0x0000000000000740       0x44 build/src/main.o
+                0x0000000000000740                getFrame
+ *fill*         0x0000000000000784        0xc 
  .text.drawMaze
-                0x0000000000000740       0x5c build/src/main.o
-                0x0000000000000740                drawMaze
- *fill*         0x000000000000079c        0x4 
- .text.update   0x00000000000007a0       0x24 build/src/main.o
- *fill*         0x00000000000007c4        0xc 
+                0x0000000000000790       0x44 build/src/main.o
+                0x0000000000000790                drawMaze
+ *fill*         0x00000000000007d4        0xc 
+ .text.update   0x00000000000007e0       0x24 build/src/main.o
+ *fill*         0x0000000000000804        0xc 
  .text.eventHandlerShim
-                0x00000000000007d0       0x1c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
-                0x00000000000007d0                eventHandlerShim
- .text.rand     0x00000000000007ec       0x3c /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-rand.o)
-                0x00000000000007ec                rand
+                0x0000000000000810       0x1c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+                0x0000000000000810                eventHandlerShim
+ .text.rand     0x000000000000082c       0x3c /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-rand.o)
+                0x000000000000082c                rand
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -247,95 +249,98 @@ END GROUP
  *(.dtors)
  *(.rodata*)
  .rodata.init.str1.4
-                0x0000000000000828       0xa2 build/src/main.o
- *fill*         0x00000000000008ca        0x2 
+                0x0000000000000868       0xa2 build/src/main.o
+ *fill*         0x000000000000090a        0x2 
  .rodata.eventHandler.str1.4
-                0x00000000000008cc       0x2c build/src/main.o
+                0x000000000000090c       0x2c build/src/main.o
+ .rodata.getFrame.str1.4
+                0x0000000000000938       0x1e build/src/main.o
+ *fill*         0x0000000000000956        0x2 
  .rodata.str1.4
-                0x00000000000008f8       0x29 build/src/main.o
+                0x0000000000000958       0x29 build/src/main.o
  *(.eh_frame*)
 
-.glue_7         0x0000000000000924        0x0
- .glue_7        0x0000000000000924        0x0 linker stubs
+.glue_7         0x0000000000000984        0x0
+ .glue_7        0x0000000000000984        0x0 linker stubs
 
-.glue_7t        0x0000000000000924        0x0
- .glue_7t       0x0000000000000924        0x0 linker stubs
+.glue_7t        0x0000000000000984        0x0
+ .glue_7t       0x0000000000000984        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000000924        0x0
- .vfp11_veneer  0x0000000000000924        0x0 linker stubs
+.vfp11_veneer   0x0000000000000984        0x0
+ .vfp11_veneer  0x0000000000000984        0x0 linker stubs
 
-.v4_bx          0x0000000000000924        0x0
- .v4_bx         0x0000000000000924        0x0 linker stubs
+.v4_bx          0x0000000000000984        0x0
+ .v4_bx         0x0000000000000984        0x0 linker stubs
 
-.iplt           0x0000000000000924        0x0
- .iplt          0x0000000000000924        0x0 build/src/main.o
+.iplt           0x0000000000000984        0x0
+ .iplt          0x0000000000000984        0x0 build/src/main.o
 
-.rel.dyn        0x0000000000000924        0x0
- .rel.iplt      0x0000000000000924        0x0 build/src/main.o
+.rel.dyn        0x0000000000000984        0x0
+ .rel.iplt      0x0000000000000984        0x0 build/src/main.o
 
-.data           0x0000000000000928      0x430
-                0x0000000000000928                __etext = .
-                0x0000000000000928                __data_start__ = .
+.data           0x0000000000000988      0x430
+                0x0000000000000988                __etext = .
+                0x0000000000000988                __data_start__ = .
  *(vtable)
  *(.data*)
  .data.fontpath
-                0x0000000000000928        0x4 build/src/main.o
-                0x0000000000000928                fontpath
+                0x0000000000000988        0x4 build/src/main.o
+                0x0000000000000988                fontpath
  .data._impure_ptr
-                0x000000000000092c        0x4 /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-impure.o)
-                0x000000000000092c                _impure_ptr
+                0x000000000000098c        0x4 /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-impure.o)
+                0x000000000000098c                _impure_ptr
  .data.impure_data
-                0x0000000000000930      0x428 /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-impure.o)
-                0x0000000000000d58                . = ALIGN (0x4)
+                0x0000000000000990      0x428 /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-impure.o)
+                0x0000000000000db8                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end = .)
-                0x0000000000000d58                . = ALIGN (0x4)
+                0x0000000000000db8                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
                 [!provide]                        PROVIDE (__init_array_end = .)
-                0x0000000000000d58                . = ALIGN (0x4)
+                0x0000000000000db8                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000000000d58                . = ALIGN (0x4)
-                0x0000000000000d58                __data_end__ = .
+                0x0000000000000db8                . = ALIGN (0x4)
+                0x0000000000000db8                __data_end__ = .
 
-.igot.plt       0x0000000000000d58        0x0
- .igot.plt      0x0000000000000d58        0x0 build/src/main.o
+.igot.plt       0x0000000000000db8        0x0
+ .igot.plt      0x0000000000000db8        0x0 build/src/main.o
 
-.bss            0x0000000000000d58      0x180
-                0x0000000000000d58                . = ALIGN (0x4)
-                0x0000000000000d58                __bss_start__ = .
+.bss            0x0000000000000db8      0x180
+                0x0000000000000db8                . = ALIGN (0x4)
+                0x0000000000000db8                __bss_start__ = .
  *(.bss*)
- .bss.GAMEDATA  0x0000000000000d58      0x178 build/src/main.o
-                0x0000000000000d58                GAMEDATA
- .bss.font      0x0000000000000ed0        0x4 build/src/main.o
-                0x0000000000000ed0                font
+ .bss.GAMEDATA  0x0000000000000db8      0x178 build/src/main.o
+                0x0000000000000db8                GAMEDATA
+ .bss.font      0x0000000000000f30        0x4 build/src/main.o
+                0x0000000000000f30                font
  .bss.pdrealloc
-                0x0000000000000ed4        0x4 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+                0x0000000000000f34        0x4 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
  *(COMMON)
  *(COM)
-                0x0000000000000ed8                . = ALIGN (0x4)
-                0x0000000000000ed8                __bss_end__ = .
+                0x0000000000000f38                . = ALIGN (0x4)
+                0x0000000000000f38                __bss_end__ = .
 
 /DISCARD/
  *(.ARM.exidx)
 OUTPUT(build/pdex.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0xd0b7
- .debug_info    0x0000000000000000     0x6ac8 build/src/main.o
- .debug_info    0x0000000000006ac8     0x65ef build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+.debug_info     0x0000000000000000     0xd0ec
+ .debug_info    0x0000000000000000     0x6afd build/src/main.o
+ .debug_info    0x0000000000006afd     0x65ef build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
 
-.debug_abbrev   0x0000000000000000      0x7e3
- .debug_abbrev  0x0000000000000000      0x4a1 build/src/main.o
- .debug_abbrev  0x00000000000004a1      0x342 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+.debug_abbrev   0x0000000000000000      0x7ef
+ .debug_abbrev  0x0000000000000000      0x4ad build/src/main.o
+ .debug_abbrev  0x00000000000004ad      0x342 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
 
-.debug_loc      0x0000000000000000      0x6c3
- .debug_loc     0x0000000000000000      0x4a7 build/src/main.o
- .debug_loc     0x00000000000004a7      0x21c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+.debug_loc      0x0000000000000000      0x7b1
+ .debug_loc     0x0000000000000000      0x595 build/src/main.o
+ .debug_loc     0x0000000000000595      0x21c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
 
 .debug_aranges  0x0000000000000000       0x90
  .debug_aranges
@@ -403,14 +408,14 @@ OUTPUT(build/pdex.elf elf32-littlearm)
  .debug_macro   0x00000000000025c7       0x58 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
  .debug_macro   0x000000000000261f       0x1c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
 
-.debug_line     0x0000000000000000      0xd89
- .debug_line    0x0000000000000000      0x8ed build/src/main.o
- .debug_line    0x00000000000008ed      0x49c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+.debug_line     0x0000000000000000      0xda7
+ .debug_line    0x0000000000000000      0x90b build/src/main.o
+ .debug_line    0x000000000000090b      0x49c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
 
-.debug_str      0x0000000000000000     0xb19b
- .debug_str     0x0000000000000000     0xb117 build/src/main.o
-                                       0xb5f1 (size before relaxing)
- .debug_str     0x000000000000b117       0x84 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+.debug_str      0x0000000000000000     0xb1a4
+ .debug_str     0x0000000000000000     0xb120 build/src/main.o
+                                       0xb5fa (size before relaxing)
+ .debug_str     0x000000000000b120       0x84 build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
                                        0xa247 (size before relaxing)
 
 .comment        0x0000000000000000       0x79
@@ -435,13 +440,13 @@ OUTPUT(build/pdex.elf elf32-littlearm)
  .ARM.attributes
                 0x00000000000000f6       0x32 /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-impure.o)
 
-.debug_frame    0x0000000000000000      0x384
- .debug_frame   0x0000000000000000      0x158 build/src/main.o
- .debug_frame   0x0000000000000158       0x5c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
- .debug_frame   0x00000000000001b4       0xac /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x0000000000000260       0xc4 /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x0000000000000324       0x24 /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixdfsi.o)
- .debug_frame   0x0000000000000348       0x3c /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-rand.o)
+.debug_frame    0x0000000000000000      0x398
+ .debug_frame   0x0000000000000000      0x16c build/src/main.o
+ .debug_frame   0x000000000000016c       0x5c build//Users/mjw/Developer/PlaydateSDK/C_API/buildsupport/setup.o
+ .debug_frame   0x00000000000001c8       0xac /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x0000000000000274       0xc4 /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x0000000000000338       0x24 /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x000000000000035c       0x3c /usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-rand.o)
 
 Cross Reference Table
 

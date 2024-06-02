@@ -14,7 +14,7 @@ void drawPlayer(PlaydateAPI* pd);
 
 const int MAZE_X = 12;
 const int MAZE_Y = 7;
-const int MAZE_LINEAR = 84;
+const int MAZE_LINEAR = MAZE_X * MAZE_Y;
 const int X_OFFSET = 7;
 const int Y_OFFSET = 8;
 
@@ -108,9 +108,9 @@ void ProcessInput(PlaydateAPI* pd)
   pd->system->getButtonState( &current, &pushed, &released );
 
   if ( pushed & kButtonLeft  ) { GAMEDATA.player_x--; }
+  else if ( pushed & kButtonRight ) { GAMEDATA.player_x++; }
   else if ( pushed & kButtonUp    ) { GAMEDATA.player_y--; }
   else if ( pushed & kButtonDown  ) { GAMEDATA.player_y++; }
-  else if ( pushed & kButtonRight ) { GAMEDATA.player_x++; }
   else if ( pushed & kButtonA ) { build_maze(pd); }
 
 	if (GAMEDATA.player_x <= 0) GAMEDATA.player_x = 0;
@@ -128,6 +128,7 @@ void drawPlayer(PlaydateAPI* pd)
 	LCDBitmap *p = pd->graphics->getTableBitmap( GAMEDATA.playerTable, (int) GAMEDATA.playerFrame);
   pd->graphics->drawScaledBitmap( p, X_OFFSET+(GAMEDATA.player_x*32), Y_OFFSET+(GAMEDATA.player_y*32), 4, 4 );
 }
+
 void drawMaze(PlaydateAPI* pd)
 {
 	//Loop over the grid like it's 1992...
@@ -141,16 +142,23 @@ void drawMaze(PlaydateAPI* pd)
 	{
 		for (y=0;y<MAZE_Y;y++)
 		{
-       pd->graphics->drawScaledBitmap( getFrame(pd, x, y), X_OFFSET+(x*32), Y_OFFSET+(y*32), 4, 4 );
+			LCDBitmap* frame = getFrame(pd, x, y);
+      pd->graphics->drawScaledBitmap( frame, X_OFFSET+(x*32), Y_OFFSET+(y*32), 4, 4 );
 		}
 	}
-
-	//need to draw a player...
 }
 
 LCDBitmap* getFrame(PlaydateAPI *pd, int x, int y)
 {
-  return pd->graphics->getTableBitmap( GAMEDATA.bitmapTable, GAMEDATA.maze[x*y]);
+	// Y rows of X, plus the extra X.. this is counter intuitive, but essential.
+	int location = (y * MAZE_X) + x;
+	
+	// GCC compiler goes bananas if our code looks like it can go out of bounds...
+	if (location > MAZE_LINEAR) location = MAZE_LINEAR;
+
+	pd->system->logToConsole("Location: %d = (%d * %d) + %d", location, y, MAZE_X, x);
+
+  return pd->graphics->getTableBitmap( GAMEDATA.bitmapTable, GAMEDATA.maze[location]);
 }
 
 int build_maze(PlaydateAPI *pd)
