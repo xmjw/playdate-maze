@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdbool.h>
 
 #include "pd_api.h"
 
@@ -11,24 +12,31 @@ LCDBitmap* getFrame(PlaydateAPI *pd, int x, int y);
 void init(PlaydateAPI *pd);
 int build_maze(PlaydateAPI *pd);
 void drawPlayer(PlaydateAPI* pd);
+double crank_angle(PlaydateAPI *pd);
+int compute_scale(double angle);
 
 const int MAZE_X = 12;
 const int MAZE_Y = 7;
 const int MAZE_LINEAR = MAZE_X * MAZE_Y;
 const int X_OFFSET = 7;
 const int Y_OFFSET = 8;
+const int TILE_SIZE = 8;
+
+const bool debug_output = false;
 
 struct {
-  int SCREEN_WIDTH;
-  int SCREEN_HEIGHT;
-  float frame;
-  LCDBitmapTable* bitmapTable;
-	LCDBitmapTable* playerTable;
-  const char* err;
-	int maze[84];
-	int player_x;
-	int player_y;	
-	double playerFrame;
+  int SCREEN_WIDTH; // Size of screen. Should be a const.
+  int SCREEN_HEIGHT; // Size of screen. Should be a const.
+  float frame; // ??
+  LCDBitmapTable* bitmapTable; // Maze walls BitMap
+	LCDBitmapTable* playerTable; //Player BitMap
+  const char* err; // Any errors we want to capture.
+	int maze[84]; // Linear array of maze, arranged as a full X row, then another.
+	int player_x; // Player X relative to sqaure of maze.
+	int player_y;	// Player Y relative to square of maze.
+	double playerFrame; // Which player frame in the tileset to display.
+	int scale; // Current scale we're using.
+	int tile_scale; // How big each tile should be.
 } GAMEDATA;
 
 
@@ -65,35 +73,30 @@ void init(PlaydateAPI *pd)
   const char* wall_table = "walls"; // "robot-table-8-8.png";
   GAMEDATA.bitmapTable = pd->graphics->loadBitmapTable( wall_table, &GAMEDATA.err );
 
-	if (GAMEDATA.bitmapTable == NULL)
-	{
-    pd->system->error( "Could not load wall bitmap table: %s", GAMEDATA.err );
-	}
-	else pd->system->logToConsole( "Got wall bitmap, ready to roll.");
-
   const char* player_table = "player"; // "robot-table-8-8.png";
   GAMEDATA.playerTable = pd->graphics->loadBitmapTable( player_table, &GAMEDATA.err );
 
-	if (GAMEDATA.playerTable == NULL)
-	{
-    pd->system->error( "Could not load player bitmap table: %s", GAMEDATA.err );
-	}
-	else pd->system->logToConsole( "Got player bitmap, ready to roll.");
-
-
+	GAMEDATA.scale = 4;
 	GAMEDATA.player_x = 0;
 	GAMEDATA.player_y = 0;
 
-	build_maze(pd);
+	srand(pd->system->getCurrentTimeMilliseconds());
 
-	// srand(time(NULL));
+	build_maze(pd);
 }
 
 static int update(void* userdata)
 {
+	// Get API object, clear the screen.
 	PlaydateAPI* pd = userdata;
 	pd->graphics->clear(kColorWhite);
+
+	// Process controls...
   ProcessInput(pd);
+	GAMEDATA.scale = compute_scale(crank_angle(pd));
+	GAMEDATA.tile_scale = 8 * GAMEDATA.scale;
+
+	// Dow things with the data...
   drawMaze(pd);
 	drawPlayer(pd);
 
@@ -126,7 +129,16 @@ void drawPlayer(PlaydateAPI* pd)
 	if (GAMEDATA.playerFrame > 4) GAMEDATA.playerFrame = 0;
 
 	LCDBitmap *p = pd->graphics->getTableBitmap( GAMEDATA.playerTable, (int) GAMEDATA.playerFrame);
-  pd->graphics->drawScaledBitmap( p, X_OFFSET+(GAMEDATA.player_x*32), Y_OFFSET+(GAMEDATA.player_y*32), 4, 4 );
+  pd->graphics->drawScaledBitmap( p, X_OFFSET+(GAMEDATA.player_x*GAMEDATA.tile_scale), Y_OFFSET+(GAMEDATA.player_y*GAMEDATA.tile_scale), GAMEDATA.scale, GAMEDATA.scale );
+}
+
+int compute_scale(double angle)
+{
+	if (angle > 0 && angle < 72) return 1;
+	if (angle > 71 && angle < 144) return 2;
+	if (angle > 143 && angle < 215) return 3;
+	if (angle > 214 && angle < 286) return 4;
+	if (angle > 287 && angle < 360) return 5;
 }
 
 void drawMaze(PlaydateAPI* pd)
@@ -143,7 +155,7 @@ void drawMaze(PlaydateAPI* pd)
 		for (y=0;y<MAZE_Y;y++)
 		{
 			LCDBitmap* frame = getFrame(pd, x, y);
-      pd->graphics->drawScaledBitmap( frame, X_OFFSET+(x*32), Y_OFFSET+(y*32), 4, 4 );
+      pd->graphics->drawScaledBitmap( frame, X_OFFSET+(x*GAMEDATA.tile_scale), Y_OFFSET+(y*GAMEDATA.tile_scale), GAMEDATA.scale, GAMEDATA.scale);
 		}
 	}
 }
@@ -156,7 +168,7 @@ LCDBitmap* getFrame(PlaydateAPI *pd, int x, int y)
 	// GCC compiler goes bananas if our code looks like it can go out of bounds...
 	if (location > MAZE_LINEAR) location = MAZE_LINEAR;
 
-	pd->system->logToConsole("Location: %d = (%d * %d) + %d", location, y, MAZE_X, x);
+	//pd->system->logToConsole("Location: %d = (%d * %d) + %d", location, y, MAZE_X, x);
 
   return pd->graphics->getTableBitmap( GAMEDATA.bitmapTable, GAMEDATA.maze[location]);
 }
@@ -168,4 +180,16 @@ int build_maze(PlaydateAPI *pd)
 	  GAMEDATA.maze[i] = rand() % 14;
 	}
 	return 0;
+}
+
+double crank_angle(PlaydateAPI *pd)
+{
+  // Check crank state
+  double crankAngleDegrees = pd->system->getCrankAngle();
+  //double crankAngleRadians = crankAngleDegrees * ( 3.14159 / 180 );
+  //double crankChangeDegrees = pd->system->getCrankChange();
+
+	if (debug_output) pd->system->logToConsole("Crank: %f", crankAngleDegrees);
+
+	return crankAngleDegrees;
 }
